@@ -4,7 +4,7 @@ const navData = [
   "Home",
   "GitHub",
   "Install",
-  "DragGAN Dawonload",
+  "DragGAN Download",
   "AI Tools",
   "ChatGPT",
   "Submit Guest Post",
@@ -19,9 +19,9 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="flex justify-center bg-cyan-500">
+      <div className="flex justify-center bg-cyan-500 sm:flex flex-col">
         {/* Centering container */}
-        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
           <div className="relative flex h-28 items-center justify-between">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
               {/* Mobile menu button */}
@@ -29,8 +29,6 @@ export default function Navbar() {
                 onClick={toggleMobileMenu}
                 className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 focus:outline-none focus:ring-inset"
               >
-                <span className="absolute -inset-0" />
-                <span className="sr-only">Open main menu</span>
                 {isMobileMenuOpen ? (
                   <svg
                     className="block h-6 w-6 ml-[-25px] text-white"

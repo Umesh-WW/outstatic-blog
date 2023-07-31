@@ -1,6 +1,6 @@
 ---
 title: 'The Dynamic Duo: Outstatic and AI Revolutionizing the Web Experience'
-status: 'draft'
+status: 'published'
 author:
   name: 'Umesh'
   picture: 'https://avatars.githubusercontent.com/u/138206213?v=4'

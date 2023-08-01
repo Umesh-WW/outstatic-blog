@@ -3,8 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Index = ({ posts }) => {
-  console.log("posts", posts);
-
   return (
     <>
       <div className="container">
@@ -72,24 +70,6 @@ const Index = ({ posts }) => {
             );
           })}
         </div>
-        {/* {posts.map((post) => (
-          <Link href={"/blog/" + post.slug} key={post.publishedAt}>
-            <div className="card">
-              <Image
-                className="card-img"
-                width={100}
-                height={100}
-                src={post.coverImage}
-                alt={post.title}
-              />
-              <div className="card-body">
-                <h2>{post.title}</h2>
-                <p>{post.description}</p>
-                <small className="author">By: {post.author.name}</small>
-              </div>
-            </div>
-          </Link>
-        ))} */}
       </div>
     </>
   );

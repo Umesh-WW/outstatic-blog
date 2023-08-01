@@ -4,7 +4,7 @@ import Sidebar from "@/components/Layout/Sidebar";
 import React from "react";
 import "tailwindcss/tailwind.css";
 
-function MyApp({ Component, pageProps,router }) {
+function MyApp({ Component, pageProps, router }) {
   
   return (
     <div className="flex flex-col min-h-screen">

@@ -3,7 +3,7 @@ import React from "react";
 
 const Sidebar = () => {
   return (
-    <aside className="bg-gray-200 p-4 md:w-64  md:relative md:right-0">
+    <aside className="md:w-64  md:relative md:right-0">
       <div className="md:max-w-[300px]">
         <div className="md:max-w-[256px] md:px-7  shadow-gray-500 shadow-lg py-8 px-16 mx-auto my-8">
           search

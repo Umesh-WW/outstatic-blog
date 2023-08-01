@@ -1,5 +1,5 @@
 ---
-title: 'Dummmy post'
+title: 'Dummy post'
 status: 'published'
 author:
   name: 'dummyman'
@@ -10,9 +10,9 @@ coverImage: '/images/image-74-7-1024x1024-YxMT.jpg'
 publishedAt: '2023-08-01T05:57:23.124Z'
 ---
 
-*<br>
+\*<br>
 
-noun*
+noun\*
 
 1. a strong piece of timber, metal, or the like, set upright as a support, a point of attachment, a place for displaying notices, etc.
 
@@ -33,6 +33,8 @@ SEE MORE
 16. *Digital Technology*.
 
     - to submit an online message to a [messag](https://www.dictionary.com/browse/message-board)
+
+    <!-- -->
 
     <!-- -->
 

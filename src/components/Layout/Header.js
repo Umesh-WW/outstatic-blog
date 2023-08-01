@@ -43,7 +43,7 @@ export default function Navbar() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
+                    d="M4 6h16M4 12h16m-7 6h7"
                   />
                 </svg>
                 {/* Icon for close menu */}
@@ -60,7 +60,7 @@ export default function Navbar() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                      d="M4 6h16M4 12h16m-7 6h7"
+                    d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
               </button>

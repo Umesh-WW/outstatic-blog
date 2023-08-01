@@ -6,7 +6,7 @@ author:
   picture: 'https://avatars.githubusercontent.com/u/138206213?v=4'
 slug: 'dumy-post'
 description: 'a strong piece of timber, metal, or the like, set upright as a support, a point of attachment, a place for displaying notices, etc.'
-coverImage: '/images/image-74-7-1024x1024-YxMT.jpg'
+coverImage: ''
 publishedAt: '2023-08-01T05:57:23.124Z'
 ---
 

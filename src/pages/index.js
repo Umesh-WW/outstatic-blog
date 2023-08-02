@@ -12,6 +12,12 @@ const Index = ({ posts }) => {
         {/* <h1>Welcome to my Blog!</h1> */}
         <div className="row">
           {posts.map((post) => {
+            if (post.title.length > 100) {
+              post.title = post.title.slice(0, 100) + "...";
+            }
+            if (post.description.length > 200) {
+              post.description = post.description.slice(0, 200) + "...";
+            }
             const publishedDate = new Date(post.publishedAt);
             const day = publishedDate.getDate();
             const month = publishedDate.toLocaleString("default", {
@@ -58,7 +64,7 @@ const Index = ({ posts }) => {
                       <p className="mb-0">
                         <Link
                           href={"/blog/" + post.slug}
-                          className="text-white bg-[#242226] text-base inline-block px-5 py-3"
+                          className="text-white bg-[#242226] hover:bg-stone-700 text-base inline-block px-5 py-3"
                         >
                           Read more
                         </Link>

@@ -5,11 +5,10 @@ import React from "react";
 import "tailwindcss/tailwind.css";
 
 function MyApp({ Component, pageProps, router }) {
-  
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
-      <div className="flex flex-col md:flex-row flex-1  justify-center">
+      <div className="flex flex-col lg:flex-row flex-1  justify-center">
         <main className="flex-1 p-4 w-full max-w-screen-lg">
           <Component {...pageProps} />
         </main>

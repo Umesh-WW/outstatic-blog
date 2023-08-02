@@ -12,14 +12,14 @@ const BlogSingle = ({ post }) => {
   return (
     <div>
       <div className="container">
-        <div className=" bg-slate-100 md:px-[3rem] px-[1rem] py-[4rem] shadow-xl shadow-gray-500 mx-auto my-3 md:w-[800px]">
-          <div className="drop-shadow-2xl">
+        <div className=" md:px-[3rem] px-[1rem] py-[4rem] drop-shadow-lg bg-white mx-auto my-3 ">
+          <div className="drop-shadow-lg">
             <Image
               src={post.coverImage}
               alt="no_image"
-              height={200}
-              width={600}
-              className="rounded-[1rem] mx-auto mb-8 font-medium drop-shadow-xl"
+              height={100}
+              width={100}
+              className="rounded-[1rem] mx-auto mb-8 font-medium drop-shadow-xl  w-[664px] h-[350px]"
             />
           </div>
           <div>
@@ -41,7 +41,9 @@ const BlogSingle = ({ post }) => {
             </div>
           </div>
           <div class="mx-auto mt-16 md:items-center p-5 md:flex max-w-md overflow-hidden rounded-xl bg-white shadow-lg md:max-w-4xl">
-            <img
+            <Image
+              width={100}
+              height={100}
               class="m-auto md:h-24 h-36 rounded-full object-cover object-center"
               src={post.author.picture}
               alt="Profile Image"

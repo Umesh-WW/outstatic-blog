@@ -22,9 +22,6 @@ const Aboutus = () => {
             innovative <b>DragGAN AI editing tool.</b>
             <br />
             <br />
-            <p>
-              Chat with Sonu: <span className="text-red-500">Telegram</span>
-            </p>
           </div>
           <div className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-lg rounded-xl mt-7">
             Other Blogs:
@@ -66,9 +63,14 @@ const Aboutus = () => {
           <div className="mt-5 ">
             If you have any questions or need assistance, please don&apos;t
             hesitate to reach out to us at
-            <span className="text-red-500"> help@dragganaitool.com</span>. We
-            value your feedback and are always ready to help you navigate the
-            exciting world of DragGAN AI editing.
+            <span className="text-red-500 hover:text-black">
+              {" "}
+              <a href="mailto:help@dragganaitool.com">
+                help@dragganaitool.com
+              </a>{" "}
+            </span>
+            . We value your feedback and are always ready to help you navigate
+            the exciting world of DragGAN AI editing.
             <br />
             <br />
             Join us on this journey of exploration and creativity with the

@@ -15,7 +15,7 @@ const Terms = () => {
               <p className="mb-5 text-[17px] mt-2em">
                 These terms and conditions (“Terms”) govern your use of the
                 DragGAN AI Tool Blog located at{" "}
-                <span className="text-red-500">
+                <span className="text-red-500 hover:text-black">
                   {" "}
                   <a href="https://dragganaitool.com/">
                     https://dragganaitool.com/

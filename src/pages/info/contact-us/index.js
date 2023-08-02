@@ -59,7 +59,7 @@ const Contactus = () => {
                 type="submit"
                 class="py-3 px-5 text-[17px] font-medium text-center text-white bg-black sm:w-fit "
               >
-                Send message
+               Submit
               </button>
             </form>
           </div>

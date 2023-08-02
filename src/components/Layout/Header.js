@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLinks } from "./NavLink";
 
 const navData = [
   "Home",
@@ -19,7 +20,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className="flex justify-center bg-cyan-500 sm:flex flex-col">
+      <div className="flex justify-center bg-cyan-500 text-white sm:flex flex-col">
         {/* Centering container */}
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
           <div className="relative flex h-28 items-center justify-between">
@@ -67,20 +68,21 @@ export default function Navbar() {
             </div>
             <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start h-[100%]">
               <div className="flex flex-shrink-0 items-center">
-                <div className="h-8 w-auto font-bold text-lg md:text-lg lg:text-5xl sm:text-small flex items-center text-white">
-                  DragGAN AI Tool{" "}
+                <div className="flex items-center mr-auto cursor-pointer font-bold text-[25px]">
+                  <a href="#">DragGAN AI Tool</a>
                 </div>
               </div>
               <div className="items-center hidden sm:ml-6 sm:block h-[100%]">
                 <div className="flex space-x-4 h-[100%]">
-                  {navData.map((item, index) => (
+                  {/* {navData.map((item, index) => (
                     <div
                       key={index}
                       className="text-white hover:bg-gray-900 hover:text-white h-[100%] flex items-center text-sm md:text-sm lg:text-xl font-medium"
                     >
                       {item}
                     </div>
-                  ))}
+                  ))} */}
+                  <NavLinks />
                 </div>
               </div>
             </div>
@@ -90,14 +92,15 @@ export default function Navbar() {
           <div className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               <div className="gap-5 text-lg font-medium space-y-5 h-[100%] pb-5">
-                {navData.map((item, index) => (
+                {/* {navData.map((item, index) => (
                   <div
                     key={index}
                     className="text-white hover:bg-gray-900 hover:text-white w-auto h-[100%] px-6 flex items-center text-sm md:text-base lg:text-xl"
                   >
                     {item}
                   </div>
-                ))}
+                ))} */}
+                <NavLinks />
               </div>
             </div>
           </div>

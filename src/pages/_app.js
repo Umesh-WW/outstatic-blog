@@ -5,6 +5,9 @@ import React from "react";
 import "tailwindcss/tailwind.css";
 
 function MyApp({ Component, pageProps, router }) {
+  if(router.pathname.includes("outstatic")){
+    return <Component {...pageProps} />;
+  }
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />

@@ -1,7 +1,17 @@
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Sidebar = () => {
+  const [blogPosts, setBlogPosts] = useState([]);
+
+  useEffect(() => {
+    // Fetch blog posts from the API route using 'fetch' or any other method
+    fetch("/api/latests/singal")
+      .then((response) => response.json())
+      .then((data) => setBlogPosts(data))
+      .catch((error) => console.error("Error fetching blog posts:", error));
+  }, []);
+  console.log("sidebar", blogPosts);
   return (
     <aside className="lg:w-[450px]  md:relative md:right-0">
       <div className="md:max-w-[450px]">

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 const Sidebar = () => {
@@ -11,7 +12,7 @@ const Sidebar = () => {
       .then((data) => setBlogPosts(data))
       .catch((error) => console.error("Error fetching blog posts:", error));
   }, []);
-  
+
   return (
     <aside className="lg:w-[450px]  md:relative md:right-0">
       <div className="md:max-w-[450px]">
@@ -29,101 +30,39 @@ const Sidebar = () => {
             Latest AI Tutorials
           </div>
 
-          <div className="mt-6 border-b-2">
-            <a href="#">
-              <Image
-                width={100}
-                height={100}
-                src="https://dragganaitool.com/wp-content/uploads/2023/07/Top-100-AI-Tools.png"
-                alt=""
-                layout="responsive"
-              />
-            </a>
-            <div className="p-2">
-              <a href="#">
-                <h5 className="mb-1 font-bold tracking-tight text-black">
-                  Fliki.ai: Best Free AI Video Generator (Convert Text to Video)
-                </h5>
-              </a>
-              <div className="text-xs">28 July 2023</div>
-            </div>
-          </div>
-          <div className="mt-6 border-b-2">
-            <a href="#">
-              <Image
-                width={100}
-                height={100}
-                src="https://dragganaitool.com/wp-content/uploads/2023/06/Fliki-AI-video-.png"
-                alt=""
-                layout="responsive"
-              />
-            </a>
-            <div className="p-2">
-              <a href="#">
-                <h5 className="mb-1 font-bold tracking-tight text-black">
-                  Fliki.ai: Best Free AI Video Generator (Convert Text to Video)
-                </h5>
-              </a>
-              <div className="text-xs">28 July 2023</div>
-            </div>
-          </div>
-          <div className="mt-6 border-b-2">
-            <a href="#">
-              <Image
-                width={100}
-                height={100}
-                src="https://dragganaitool.com/wp-content/uploads/2023/07/Midjourney-prompting-guide.png"
-                alt=""
-                layout="responsive"
-              />
-            </a>
-            <div className="p-2">
-              <a href="#">
-                <h5 className="mb-1 font-bold tracking-tight text-black">
-                  Top 100 AI Tools You Can not Ignore (Ultimate list 2023)
-                </h5>
-              </a>
-              <div className="text-xs">28 July 2023</div>
-            </div>
-          </div>
-          <div className="mt-6 border-b-2">
-            <a href="#">
-              <Image
-                width={100}
-                height={100}
-                src="https://dragganaitool.com/wp-content/uploads/2023/07/ChatGPT-Prompt-Engineering-Mastery-Course.png"
-                alt=""
-                layout="responsive"
-              />
-            </a>
-            <div className="p-2">
-              <a href="#">
-                <h5 className="mb-1 font-bold tracking-tight text-black">
-                  Top 100 AI Tools You Can not Ignore (Ultimate list 2023)
-                </h5>
-              </a>
-              <div className="text-xs">28 July 2023</div>
-            </div>
-          </div>
-          <div className="mt-6 border-b-2">
-            <a href="#">
-              <Image
-                width={100}
-                height={100}
-                src="https://dragganaitool.com/wp-content/uploads/2023/07/Canva-AI-Magic-edit-.png"
-                alt=""
-                layout="responsive"
-              />
-            </a>
-            <div className="p-2">
-              <a href="#">
-                <h5 className="mb-1 font-bold tracking-tight text-black">
-                  Top 100 AI Tools You Can not Ignore (Ultimate list 2023)
-                </h5>
-              </a>
-              <div className="text-xs">28 July 2023</div>
-            </div>
-          </div>
+          {blogPosts.map((blogPost, i) => {
+            const imageUrl = blogPost.coverImage;
+            const publishedDate = new Date(blogPost.publishedAt);
+            const day = publishedDate.getDate();
+            const month = publishedDate.toLocaleString("default", {
+              month: "short",
+            });
+            const year = publishedDate.getFullYear();
+
+            return (
+              <div className="mt-6 border-b-2" key={i}>
+                <Link href={"/latests/" + blogPost.slug}>
+                  <Image
+                    width={100}
+                    height={100}
+                    src={imageUrl}
+                    alt=""
+                    layout="responsive"
+                  />
+                </Link>
+                <div className="p-2">
+                  <Link href={"/latests/" + blogPost.slug}>
+                    <h5 className="mb-1 font-bold tracking-tight text-black">
+                      {blogPost.title}
+                    </h5>
+                  </Link>
+                  <div className="text-xs">
+                    {<time>{`${day} ${month} ${year}`}</time>}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
         </div>
         <div className="md:max-w-[350px] shadow-gray-500 shadow-md py-8 px-5 mx-auto my-8">
           <div className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-lg font-bold px-2 py-1 shadow-lg rounded-xl mt-3">

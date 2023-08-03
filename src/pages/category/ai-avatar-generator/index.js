@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Index = ({ posts }) => {
- 
   return (
     <>
       <div className="container">
@@ -58,7 +57,7 @@ const Index = ({ posts }) => {
                       </p>
                       <p className="mb-0">
                         <Link
-                          href={"/blog/" + post.slug}
+                          href={"/category/ai-avatar-generator/" + post.slug}
                           className="text-white bg-[#242226] text-base inline-block px-5 py-3"
                         >
                           Read more

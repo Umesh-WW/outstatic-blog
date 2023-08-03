@@ -2,7 +2,7 @@ import { getDocuments } from "outstatic/server";
 
 export default async function handler(req, res) {
   try {
-    const posts = await getDocuments("latests", [
+    const posts = await getDocuments("latexes", [
       "title",
       "publishedAt",
       "slug",

@@ -69,7 +69,7 @@ const BlogSingle = ({ post }) => {
 export default BlogSingle;
 
 export async function getStaticPaths() {
-  const posts = getDocuments("latexes", ["slug"]);
+  const posts = getDocuments("logo-makers", ["slug"]);
 
   const paths = posts.map((post) => ({
     params: { slug: post.slug },
@@ -83,7 +83,7 @@ export async function getStaticPaths() {
 
 export const getStaticProps = async ({ params }) => {
   const slug = params.slug;
-  const post = getDocumentBySlug("latexes", slug, [
+  const post = getDocumentBySlug("logo-makers", slug, [
     "title",
     "slug",
     "coverImage",

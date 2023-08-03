@@ -57,7 +57,7 @@ const Index = ({ posts }) => {
                       </p>
                       <p className="mb-0">
                         <Link
-                          href={"/blog/" + post.slug}
+                          href={"/ai-transcriber/" + post.slug}
                           className="text-white bg-[#242226] text-base inline-block px-5 py-3"
                         >
                           Read more

@@ -2,37 +2,31 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { OutstaticApi } from "outstatic";
-const category = [
-   ["AI Avtar Generator", "/category/ai-avatar-generator"],
-   ["AI Chatbot", "/category/ai-chatbot"],
-   ["AI Logo Maker", "/category/ai-logo-maker"],
-   ["AI Transcriber", "/category/ai-transcriber"],
-   ["AI Video Generator", "/category/ai-video-generator"],
-   ["AI Voice", "/category/ai-voice"],
-   ["AI Writer", "/category/ai-writer"],
-   ["Text Generator", "/category/text-generator"],
- ];
+import img1 from '../../assets/img1.png'
+import img2 from '../../assets/img2.png'
 
 const Sidebar = () => {
   const [blogPosts, setBlogPosts] = useState([]);
 
-    // useEffect(() => {
-    //   // Create an instance of the Outstatic API
-    //   const api = new OutstaticApi();
+  useEffect(() => {
+    // Fetch blog posts from the API route using 'fetch' or any other method
+    fetch("/api/latests/singal")
+      .then((response) => response.json())
+      .then((data) => setBlogPosts(data))
+      .catch((error) => console.error("Error fetching blog posts:", error));
+  }, []);
+  
+  const category = [
+    ["AI Avtar Generator", "/category/ai-avatar-generator"],
+    ["AI Chatbot", "/category/ai-chatbot"],
+    ["AI Logo Maker", "/category/ai-logo-maker"],
+    ["AI Transcriber", "/category/ai-transcriber"],
+    ["AI Video Generator", "/category/ai-video-generator"],
+    ["AI Voice", "/category/ai-voice"],
+    ["AI Writer", "/category/ai-writer"],
+    ["Text Generator", "/category/text-generator"],
+  ];
 
-    //   // Call the API to fetch data
-    //   api
-    //     .getData()
-    //     .then((response) => {
-    //       // Assuming the API returns an array of data, set it in the state
-    //       setData(response.data);
-    //     })
-    //     .catch((error) => {
-    //       console.error("Error fetching data:", error);
-    //     });
-    // }, []);
-
-   console.log('');
   return (
     <aside className="lg:w-[450px]  md:relative md:right-0">
       <div className="md:max-w-[450px]">
@@ -81,6 +75,48 @@ const Sidebar = () => {
               </div>
             );
           })}
+          <div className="mt-6 border-b-2">
+            <Link href={"/latests/"}>
+              <Image
+                width={100}
+                height={100}
+                src={img1}
+                alt=""
+                layout="responsive"
+              />
+            </Link>
+            <div className="p-2">
+              <Link
+                href={
+                  "/category/ai-avatar-generator/this-is-post-for-ai-avatar-generator"
+                }
+              >
+                <h5 className="mb-1 font-bold tracking-tight text-black">
+                  this is post for ai-avatar-generator
+                </h5>
+              </Link>
+              <div className="text-xs">{<time>22 01 2012</time>}</div>
+            </div>
+          </div>
+          <div className="mt-6 border-b-2">
+            <Link href={"/latests/"}>
+              <Image
+                width={100}
+                height={100}
+                src={img2}
+                alt=""
+                layout="responsive"
+              />
+            </Link>
+            <div className="p-2">
+              <Link href={"/ai-chatbot/this-is-post-of-best-chatbot"}>
+                <h5 className="mb-1 font-bold tracking-tight text-black">
+                  Pika Labs AI: Free Image to Video, Text to Video Converter
+                </h5>
+              </Link>
+              <div className="text-xs">{<time>12 01 2023</time>}</div>
+            </div>
+          </div>
         </div>
         <div className="md:max-w-[350px] shadow-gray-500 shadow-md py-8 px-5 mx-auto my-8">
           <div className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-lg font-bold px-2 py-1 shadow-lg rounded-xl mt-3">

@@ -6,7 +6,7 @@ const Index = ({ posts }) => {
   return (
     <>
       <div className="container">
-        <header className="h-55 mb-5 p-12 bg-white text-[#18a7c7] font-[600] text-4xl drop-shadow-lg ">
+        <header className="h-55 mb-5 p-12 bg-white text-[#18a7c7] font-[600] text-4xl drop-shadow-lg">
           <h1>AI Avatar Generator</h1>
         </header>
         {/* <h1>Welcome to my Blog!</h1> */}

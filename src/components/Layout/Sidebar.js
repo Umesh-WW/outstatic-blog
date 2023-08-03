@@ -109,7 +109,7 @@ const Sidebar = () => {
               />
             </Link>
             <div className="p-2">
-              <Link href={"/ai-chatbot/this-is-post-of-best-chatbot"}>
+              <Link href={"/category/ai-chatbot/this-is-post-of-best-chatbot"}>
                 <h5 className="mb-1 font-bold tracking-tight text-black">
                   Pika Labs AI: Free Image to Video, Text to Video Converter
                 </h5>

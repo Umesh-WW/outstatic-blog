@@ -11,7 +11,7 @@ const Sidebar = () => {
       .then((data) => setBlogPosts(data))
       .catch((error) => console.error("Error fetching blog posts:", error));
   }, []);
-  console.log("sidebar", blogPosts);
+  
   return (
     <aside className="lg:w-[450px]  md:relative md:right-0">
       <div className="md:max-w-[450px]">

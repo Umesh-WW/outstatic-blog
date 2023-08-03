@@ -76,7 +76,11 @@ const Sidebar = () => {
             );
           })}
           <div className="mt-6 border-b-2">
-            <Link href={"/latests/"}>
+            <Link
+              href={
+                "/category/ai-avatar-generator/this-is-post-for-ai-avatar-generator"
+              }
+            >
               <Image
                 width={100}
                 height={100}
@@ -99,7 +103,7 @@ const Sidebar = () => {
             </div>
           </div>
           <div className="mt-6 border-b-2">
-            <Link href={"/latests/"}>
+            <Link href={"/category/ai-chatbot/this-is-post-of-best-chatbot"}>
               <Image
                 width={100}
                 height={100}

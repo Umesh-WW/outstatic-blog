@@ -69,7 +69,7 @@ const BlogSingle = ({ post }) => {
 export default BlogSingle;
 
 export async function getStaticPaths() {
-  const posts = getDocuments("latests", ["slug"]);
+  const posts = getDocuments("posts", ["slug"]);
 
   const paths = posts.map((post) => ({
     params: { slug: post.slug },

@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 const Index = ({ posts }) => {
+ 
   return (
     <>
       <div className="container">
@@ -78,7 +79,7 @@ const Index = ({ posts }) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const posts = getDocuments("posts", [
+  const posts = getDocuments("avatar-generators", [
     "title",
     "publishedAt",
     "slug",

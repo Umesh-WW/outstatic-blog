@@ -78,7 +78,7 @@ const Index = ({ posts }) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const posts = getDocuments("posts", [
+  const posts = getDocuments("latests", [
     "title",
     "publishedAt",
     "slug",

@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import Link from "next/link";
 
 const Sidebar = () => {
   const [blogPosts, setBlogPosts] = useState([]);
@@ -12,14 +12,13 @@ const Sidebar = () => {
       .then((data) => setBlogPosts(data))
       .catch((error) => console.error("Error fetching blog posts:", error));
   }, []);
-
   const category = [
     ["AI Avtar Generator", "/category/ai-avatar-generator"],
     ["AI Chatbot", "/category/ai-chatbot"],
     ["AI Logo Maker", "/category/ai-logo-maker"],
     ["AI Transcriber", "/category/ai-transcriber"],
     ["AI Video Generator", "/category/ai-video-generator"],
-    ["AI Video", "/category/ai-video"],
+    ["AI Voice", "/category/ai-voice"],
     ["AI Writer", "/category/ai-writer"],
     ["Text Generator", "/category/text-generator"],
   ];
@@ -40,7 +39,6 @@ const Sidebar = () => {
           <div className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-xl font-bold px-4 py-1 shadow-lg rounded-xl mt-3">
             Latest AI Tutorials
           </div>
-
           {blogPosts.map((blogPost, i) => {
             const imageUrl = blogPost.coverImage;
             const publishedDate = new Date(blogPost.publishedAt);
@@ -49,7 +47,6 @@ const Sidebar = () => {
               month: "short",
             });
             const year = publishedDate.getFullYear();
-
             return (
               <div className="mt-6 border-b-2" key={i}>
                 <Link href={"/latests/" + blogPost.slug}>
@@ -80,7 +77,7 @@ const Sidebar = () => {
             Select Your Category
           </div>
           <div>
-            <ul id="dropdown" className="bg-white text-[#1b78e2] w-60">
+            <ul id="category" className="bg-white text-[#1b78e2] w-60">
               {category.map(([label, href], i) => (
                 <Link href={href} key={i}>
                   <li

@@ -28,10 +28,10 @@ const Terms = () => {
 
               <p className="mb-5 text-[17px] mt-2em">
                 <strong>Disclaimer</strong>: We are not affiliated with or
-                endorsed by DragGAN AI Editing software. We don’t have any
+                endorsed by DragGAN AI Editing software. We don&apos;t have any
                 tie-up with DragGAN official software. Our website provides
                 information and tutorials about the DragGAN AI tool only based
-                on our own experiences and research. We’re not the official
+                on our own experiences and research. We&apos;re not the official
                 copyright owner.
               </p>
 
@@ -95,7 +95,7 @@ const Terms = () => {
                 </li>
 
                 <li>
-                  The link must fit within the context of the linking party’s
+                  The link must fit within the context of the linking party&apos;s
                   site.
                 </li>
               </ul>

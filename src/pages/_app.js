@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps, router }) {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <div className="flex flex-col lg:flex-row flex-1  justify-center">
-        <main className="flex-1 p-4 w-full max-w-screen-lg">
+        <main className="flex-1 p-4 w-full max-w-[840px]">
           <Component {...pageProps} />
         </main>
         <Sidebar />

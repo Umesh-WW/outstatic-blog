@@ -18,7 +18,7 @@ const Sidebar = () => {
     ["AI Logo Maker", "/category/ai-logo-maker"],
     ["AI Transcriber", "/category/ai-transcriber"],
     ["AI Video Generator", "/category/ai-video-generator"],
-    ["AI Video", "/category/ai-video"],
+    ["AI Voice", "/category/ai-voice"],
     ["AI Writer", "/category/ai-writer"],
     ["Text Generator", "/category/text-generator"],
   ];

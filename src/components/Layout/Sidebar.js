@@ -1,28 +1,38 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { OutstaticApi } from "outstatic";
+const category = [
+   ["AI Avtar Generator", "/category/ai-avatar-generator"],
+   ["AI Chatbot", "/category/ai-chatbot"],
+   ["AI Logo Maker", "/category/ai-logo-maker"],
+   ["AI Transcriber", "/category/ai-transcriber"],
+   ["AI Video Generator", "/category/ai-video-generator"],
+   ["AI Voice", "/category/ai-voice"],
+   ["AI Writer", "/category/ai-writer"],
+   ["Text Generator", "/category/text-generator"],
+ ];
 
 const Sidebar = () => {
   const [blogPosts, setBlogPosts] = useState([]);
 
-  useEffect(() => {
-    // Fetch blog posts from the API route using 'fetch' or any other method
-    fetch("/api/latests/singal")
-      .then((response) => response.json())
-      .then((data) => setBlogPosts(data))
-      .catch((error) => console.error("Error fetching blog posts:", error));
-  }, []);
-  const category = [
-    ["AI Avtar Generator", "/category/ai-avatar-generator"],
-    ["AI Chatbot", "/category/ai-chatbot"],
-    ["AI Logo Maker", "/category/ai-logo-maker"],
-    ["AI Transcriber", "/category/ai-transcriber"],
-    ["AI Video Generator", "/category/ai-video-generator"],
-    ["AI Voice", "/category/ai-voice"],
-    ["AI Writer", "/category/ai-writer"],
-    ["Text Generator", "/category/text-generator"],
-  ];
+    // useEffect(() => {
+    //   // Create an instance of the Outstatic API
+    //   const api = new OutstaticApi();
 
+    //   // Call the API to fetch data
+    //   api
+    //     .getData()
+    //     .then((response) => {
+    //       // Assuming the API returns an array of data, set it in the state
+    //       setData(response.data);
+    //     })
+    //     .catch((error) => {
+    //       console.error("Error fetching data:", error);
+    //     });
+    // }, []);
+
+   console.log('');
   return (
     <aside className="lg:w-[450px]  md:relative md:right-0">
       <div className="md:max-w-[450px]">

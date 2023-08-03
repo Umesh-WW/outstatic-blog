@@ -1,7 +1,6 @@
 ---
-title: 'Play.ht AI: Free AI Voice Generator (Text to Speech AI)
-'
-status: 'draft'
+title: 'Play.ht AI: Free AI Voice Generator (Text to Speech AI) '
+status: 'published'
 author:
   name: 'ts'
   picture: 'https://avatars.githubusercontent.com/u/138206213?v=4'
@@ -13,7 +12,7 @@ publishedAt: '2023-08-03T08:27:45.839Z'
 
 Let’s dive into the exciting world of **text-to-speech (TTS) technology** and how it has taken a leap forward with the integration of artificial intelligence (AI).
 
-AI has truly transformed the TTS landscape by enabling machines to capture emotions from text and generate speech that sounds incredibly human-like. And one of the leading **TTS **[**AI tool** ](https://dragganaitool.com/category/ai-voice/)is [Play.ht](http://Play.ht)!
+AI has truly transformed the TTS landscape by enabling machines to capture emotions from text and generate speech that sounds incredibly human-like. And one of the leading \*\*TTS \*\*[**AI tool** ](https://dragganaitool.com/category/ai-voice/)is [Play.ht](http://Play.ht)!
 
 Now, what sets [Play.ht](http://Play.ht) apart from the rest? Well, imagine having access to a wide range of voices in over 140 languages and accents.
 

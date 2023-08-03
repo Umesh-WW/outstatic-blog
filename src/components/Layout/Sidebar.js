@@ -142,7 +142,7 @@ const Sidebar = () => {
           </div>
           <div>
             <ul
-              id="dropdown"
+              id="category"
               className="bg-white text-[#1b78e2] w-60"
             >
               {category.map(([label,href], i) => (

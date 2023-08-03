@@ -12,7 +12,6 @@ const Sidebar = () => {
       .then((data) => setBlogPosts(data))
       .catch((error) => console.error("Error fetching blog posts:", error));
   }, []);
-  console.log("sidebar", blogPosts);
   const category = [
     ["AI Avtar Generator", "/category/ai-avatar-generator"],
     ["AI Chatbot", "/category/ai-chatbot"],
@@ -23,6 +22,7 @@ const Sidebar = () => {
     ["AI Writer", "/category/ai-writer"],
     ["Text Generator", "/category/text-generator"],
   ];
+  
   return (
     <aside className="lg:w-[450px]  md:relative md:right-0">
       <div className="md:max-w-[450px]">

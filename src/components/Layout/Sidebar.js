@@ -13,6 +13,17 @@ const Sidebar = () => {
       .catch((error) => console.error("Error fetching blog posts:", error));
   }, []);
 
+  const category = [
+    ["AI Avtar Generator", "/category/ai-avatar-generator"],
+    ["AI Chatbot", "/category/ai-chatbot"],
+    ["AI Logo Maker", "/category/ai-logo-maker"],
+    ["AI Transcriber", "/category/ai-transcriber"],
+    ["AI Video Generator", "/category/ai-video-generator"],
+    ["AI Video", "/category/ai-video"],
+    ["AI Writer", "/category/ai-writer"],
+    ["Text Generator", "/category/text-generator"],
+  ];
+
   return (
     <aside className="lg:w-[450px]  md:relative md:right-0">
       <div className="md:max-w-[450px]">
@@ -69,83 +80,18 @@ const Sidebar = () => {
             Select Your Category
           </div>
           <div>
-            <a
-              href="#"
-              className="text-blue-500 text-sm ml-2 border-b border-gray-900"
-            >
-              AI Avatar Generator
-            </a>
-            <br />
-            <a
-              href="#"
-              className="text-blue-500 text-sm ml-2 border-b border-gray-900"
-            >
-              AI Chatbot
-            </a>
-            <br />
-            <a
-              href="#"
-              className="text-blue-500 text-sm ml-2 border-b border-gray-900"
-            >
-              AI Course
-            </a>
-            <br />
-            <a
-              href="#"
-              className="text-blue-500 text-sm ml-2 border-b border-gray-900"
-            >
-              AI Image Generator
-            </a>
-            <br />
-            <a
-              href="#"
-              className="text-blue-500 text-sm ml-2 border-b border-gray-900"
-            >
-              AI Image Upscaler
-            </a>
-            <br />
-            <a
-              href="#"
-              className="text-blue-500 text-sm ml-2 border-b border-gray-900"
-            >
-              AI Logo Maker
-            </a>
-            <br />
-            <a
-              href="#"
-              className="text-blue-500 text-sm ml-2 border-b border-gray-900"
-            >
-              AI Tool
-            </a>
-            <br />
-            <a
-              href="#"
-              className="text-blue-500 text-sm ml-2 border-b border-gray-900"
-            >
-              ChatGPT
-            </a>
-            <br />
-            <a
-              href="#"
-              className="text-blue-500 text-sm ml-2 border-b border-gray-900"
-            >
-              Text Generator
-            </a>
-            <br />
-            <a
-              href="#"
-              className="text-blue-500 text-sm ml-2 border-b border-gray-900"
-            >
-              Uncategorised
-            </a>
-            <br />
-            <a
-              href="#"
-              className="text-blue-500 text-sm ml-2 border-b border-gray-900"
-            >
-              Working
-            </a>
-            <br />
+            <ul id="dropdown" className="bg-white text-[#1b78e2] w-60">
+              {category.map(([label, href], i) => (
+                <Link href={href} key={i}>
+                  <li
+                    key={label}
+                    className={`hover:text-gray-900 text-base font-semibold ml-2 border-gray-900 p-2 border-b`}
+                  >
+                    <span>{label}</span>
+                  </li>
+                </Link>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

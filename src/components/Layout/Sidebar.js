@@ -30,7 +30,7 @@ const Sidebar = () => {
   return (
     <aside className="lg:w-[450px]  md:relative md:right-0">
       <div className="md:max-w-[450px]">
-        <div className="md:max-w-[350px] md:px-7 text-xl shadow-gray-500 shadow-md py-8 px-16 mx-auto my-8">
+        {/* <div className="md:max-w-[350px] md:px-7 text-xl shadow-gray-500 shadow-md py-8 px-16 mx-auto my-8">
           Search
           <div className="flex gap-3">
             <input type="text" className="border border-black w-[8rem] mr" />
@@ -38,7 +38,7 @@ const Sidebar = () => {
               Search
             </button>
           </div>
-        </div>
+        </div> */}
         <div className="md:max-w-[350px] shadow-gray-500 shadow-md py-8 px-8 mx-auto my-8">
           <div className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-xl font-bold px-4 py-1 shadow-lg rounded-xl mt-3">
             Latest AI Tutorials

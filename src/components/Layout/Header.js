@@ -1,15 +1,6 @@
 import React, { useState } from "react";
 import { HeaderLinks } from "../UI/HederLink";
 
-const navData = [
-  "Home",
-  "GitHub",
-  "Install",
-  "DragGAN Download",
-  "AI Tools",
-  "ChatGPT",
-  "Submit Guest Post",
-];
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -73,14 +64,6 @@ export default function Navbar() {
               </div>
               <div className="items-center hidden sm:ml-6 sm:block ">
                 <div className="flex">
-                  {/* {navData.map((item, index) => (
-                    <div
-                      key={index}
-                      className="text-white hover:bg-gray-900 hover:text-white h-[100%] flex items-center text-sm md:text-sm lg:text-xl font-medium"
-                    >
-                      {item}
-                    </div>
-                  ))} */}
                   <HeaderLinks/>
                 </div>
               </div>
@@ -91,14 +74,6 @@ export default function Navbar() {
           <div className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">
               <div className="gap-5 text-lg font-medium space-y-5 h-[100%] pb-5">
-                {/* {navData.map((item, index) => (
-                  <div
-                    key={index}
-                    className="text-white hover:bg-gray-900 hover:text-white w-auto h-[100%] px-6 flex items-center text-sm md:text-base lg:text-xl"
-                  >
-                    {item}
-                  </div>
-                ))} */}
                 <HeaderLinks/>
               </div>
             </div>

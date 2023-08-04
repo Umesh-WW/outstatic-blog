@@ -9,14 +9,9 @@ const Index = ({ allBlogs }) => {
   let filteredBlogs = [];
   if (s && allBlogs && allBlogs.length > 0) {
     filteredBlogs = allBlogs.filter((post) =>
-    {
-      console.log(post.collection);
-    return  post.title.toLowerCase().includes(s.toLowerCase())
-    });
+      post.title.toLowerCase().includes(s.toLowerCase())
+    );
   }
-   allBlogs.forEach((post,i) => {
-     console.log(i,'------------>;',post.collection);
-    });
   return (
     <>
       <div className="container">
@@ -77,7 +72,7 @@ const Index = ({ allBlogs }) => {
                       </p>
                       <p className="mb-0">
                         <Link
-                          href={"/blog/" + post.slug}
+                          href={`/category/${post.collection}/${post.slug}`}
                           className="text-white bg-[#242226] hover:bg-stone-700 text-base inline-block px-5 py-3"
                         >
                           Read more

@@ -3,8 +3,6 @@ import Image from "next/image";
 
 const Index = ({ posts }) => {
       const handleLinkClick = (path) => {
-        console.log('path-------------->',path);
-        // Send a message to the parent window with the path of the clicked link
         window.parent.postMessage({ type: "changePath", path }, "*");
       };
   return (
@@ -23,7 +21,6 @@ const Index = ({ posts }) => {
           const year = publishedDate.getFullYear();
           return (
             <div className="mt-6 border-b-2" key={i}>
-              {/* <Link href={"/latests/" + blogPost.slug}> */}
               <Image
                 width={100}
                 height={100}
@@ -31,17 +28,15 @@ const Index = ({ posts }) => {
                 alt=""
                 layout="responsive"
               />
-              {/* </Link> */}
               <div className="p-2">
-                {/* <Link href={"/latests/" + blogPost.slug}> */}
-
                 <h5
-                  onClick={() => handleLinkClick("/latests/" + blogPost.slug)}
-                  className="mb-1 font-bold tracking-tight text-black"
+                  onClick={() =>
+                    handleLinkClick("/category/latexes/" + blogPost.slug)
+                  }
+                  className="mb-1 font-bold tracking-tight text-black cursor-pointer"
                 >
                   {blogPost.title}
                 </h5>
-                {/* </Link> */}
                 <div className="text-xs">
                   {<time>{`${day} ${month} ${year}`}</time>}
                 </div>

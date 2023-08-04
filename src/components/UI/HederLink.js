@@ -5,26 +5,26 @@ export function HeaderLinks() {
   const router = useRouter();
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const links = [
-    { name: "Home", path: "/category/ai-avatar-generator" },
-    { name: "Github", path: "/category/ai-logo-maker" },
-    { name: "Install", path: "/category/ai-video-generator" },
-    { name: "DragGAN Download", path: "/category/ai-video-generator" },
+    { name: "Home", path: "/category/avatar-generators" },
+    { name: "Github", path: "/category/logo-makers" },
+    { name: "Install", path: "/category/video-generators" },
+    { name: "DragGAN Download", path: "/category/video-generators" },
     {
       name: "AI Tools",
       path: "/category/ai-tool",
       dropdown: true,
       subMenu: [
-        { name: "AI Avtar Generator", path: "/category/ai-avatar-generator" },
-        { name: "AI Chatbot", path: "/category/ai-chatbot" },
-        { name: "AI Logo Maker", path: "/category/ai-logo-maker" },
-        { name: "AI Transcriber", path: "/category/ai-transcriber" },
-        { name: "AI Video Generator", path: "/category/ai-video-generator" },
-        { name: "AI Voice", path: "/category/ai-voice" },
-        { name: "AI Writer", path: "/category/ai-writer" },
-        { name: "Text Generator", path: "/category/text-generator" },
+        { name: "AI Avtar Generator", path: "/category/avatar-generators" },
+        { name: "AI Chatbot", path: "/category/chatbots" },
+        { name: "AI Logo Maker", path: "/category/logo-makers" },
+        { name: "AI Transcriber", path: "/category/transcribers" },
+        { name: "AI Video Generator", path: "/category/video-generators" },
+        { name: "AI Voice", path: "/category/a-ivoices" },
+        { name: "AI Writer", path: "/category/writers" },
+        { name: "Text Generator", path: "/category/text-generators" },
       ],
     },
-    { name: "ChatGPT", path: "/category/ai-chatbot" },
+    { name: "ChatGPT", path: "/category/chatbots" },
     // { name: "Submit Guest Post", path: "/submit-guest-post/" },
   ];
   const DropdownMenu = ({ subMenu }) => {
@@ -33,7 +33,7 @@ export function HeaderLinks() {
         id="dropdown"
         className="bg-cyan-500 text-white absolute z-10 w-60 mt-5"
       >
-        {subMenu.map(({ name, path },i) => (
+        {subMenu.map(({ name, path }, i) => (
           <Link href={path} key={i} onClick={() => setIsSubMenuOpen(false)}>
             <li key={name} className={`hover:bg-gray-900 p-3`}>
               <span
@@ -51,7 +51,7 @@ export function HeaderLinks() {
   };
   return (
     <>
-      {links.map(({ name, path, subMenu },i) => (
+      {links.map(({ name, path, subMenu }, i) => (
         <div key={i} className="relative">
           <Link
             href={path}

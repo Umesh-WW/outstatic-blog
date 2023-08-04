@@ -1,17 +1,27 @@
-import { getDocuments } from "outstatic/server";
+import { getCollections, getDocuments } from "outstatic/server";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
-const Index = ({ posts }) => {
+const Index = ({ allBlogs }) => {
+  const router = useRouter();
+  const { s } = router.query;
+  console.log("ssssss", s, allBlogs);
+  let filteredBlogs = [];
+  if(s && allBlogs && allBlogs.length > 0) {
+   filteredBlogs = allBlogs.filter((post) =>
+    post.title.toLowerCase().includes(s.toLowerCase())
+  );
+ }
   return (
     <>
       <div className="container">
         <header className="h-55 mb-5 p-12 bg-white text-[#18a7c7] font-[600] text-4xl drop-shadow-lg ">
-          <h1>Home Page</h1>
+          <h1>{s ? `Search Results for: ${s}` : "Home Page"}</h1>
         </header>
         {/* <h1>Welcome to my Blog!</h1> */}
         <div className="row">
-          {posts.map((post) => {
+          {(s ? filteredBlogs : allBlogs).map((post) => {
             if (post.title.length > 100) {
               post.title = post.title.slice(0, 100) + "...";
             }
@@ -76,6 +86,15 @@ const Index = ({ posts }) => {
             );
           })}
         </div>
+        {filteredBlogs.length < 1 && s && (
+          <header className="h-55 mb-5 p-12 bg-white text-[#18a7c7] font-[600] text-4xl drop-shadow-lg ">
+            <h1>Nothing Found</h1>
+            <p className="h-4 mb-5 p-4 text-black text-lg"> 
+              Sorry, but nothing matched your search terms. Please try again
+              with some different keywords.
+            </p>
+          </header>
+        )}
       </div>
     </>
   );
@@ -83,17 +102,28 @@ const Index = ({ posts }) => {
 
 export default Index;
 
-export const getStaticProps = async () => {
-  const posts = getDocuments("posts", [
-    "title",
-    "publishedAt",
-    "slug",
-    "coverImage",
-    "description",
-    "author",
-  ]);
+
+export async function getStaticProps() {
+  const collection = getCollections();
+  let allBlogs = [];
+  console.log('collections---------->,',collection);
+  (collection || []).map((i) => {
+    let blogData = getDocuments(i, [
+      "title",
+      "publishedAt",
+      "slug",
+      "coverImage",
+      "description",
+      "content",
+      "author",
+    ]);
+    allBlogs = [...allBlogs, ...blogData];
+  });
+  allBlogs.sort(function (a, b) {
+    return a.publishedAt.localeCompare(b.publishedAt);
+  });
 
   return {
-    props: { posts },
+    props: { allBlogs },
   };
-};
+}

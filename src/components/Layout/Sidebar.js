@@ -1,11 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-const Sidebar = () => {
-  const router = useRouter();
- 
-  const category = [
+const category = [
     ["AI Avtar Generator", "/category/ai-avatar-generator"],
     ["AI Chatbot", "/category/ai-chatbot"],
     ["AI Logo Maker", "/category/ai-logo-maker"],
@@ -15,37 +12,48 @@ const Sidebar = () => {
     ["AI Writer", "/category/ai-writer"],
     ["Text Generator", "/category/text-generator"],
   ];
-    useEffect(() => {
-      const handleMessage = (event) => {
-        const { type, path } = event.data;
-        if (type === "changePath") {
-           router.push(path);
 
-        }
-      };
+const Sidebar = () => {
+  const [search, setSearch] = useState('')
+  const router = useRouter();
 
-      // Add the event listener when the component mounts
-      window.addEventListener("message", handleMessage);
+  useEffect(() => {
+    const handleMessage = (event) => {
+      const { type, path } = event.data;
+      if (type === "changePath") {
+        router.push(path);
+      }
+    };
 
-      // Remove the event listener when the component unmounts
-      return () => {
-        window.removeEventListener("message", handleMessage);
-      };
-    }, []);
+    // Add the event listener when the component mounts
+    window.addEventListener("message", handleMessage);
 
+    // Remove the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("message", handleMessage);
+    };
+  }, []);
+
+  const handleChangeSearch = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const handleSearch = () => {
+      router.push(`/?s=${search}`);
+  }
 
   return (
     <aside className="lg:w-[450px]  md:relative md:right-0">
       <div className="md:max-w-[450px]">
-        {/* <div className="md:max-w-[350px] md:px-7 text-xl shadow-gray-500 shadow-md py-8 px-16 mx-auto my-8">
+        <div className="md:max-w-[350px] md:px-7 text-xl shadow-gray-500 shadow-md py-8 px-16 mx-auto my-8">
           Search
           <div className="flex gap-3">
-            <input type="text" className="border border-black w-[8rem] mr" />
-            <button className="bg-black text-md text-white py-1 px-3 rounded">
+            <input type="text" value={search} onChange={handleChangeSearch} className="border border-black w-[8rem] mr" />
+            <button onClick={handleSearch} className="bg-black text-md text-white py-1 px-3 rounded">
               Search
             </button>
           </div>
-        </div> */}
+        </div>
 
         <div className="md:max-w-[350px] shadow-gray-500 shadow-md py-8 px-5 mx-auto my-8">
           <iframe
@@ -53,8 +61,8 @@ const Sidebar = () => {
             width="100%" // Set the desired width of the sidebar
             height="100%"
             // scrolling="no"
-            style={{ border: "0px", overflow: "hidden",height: "100vh" }}
-          />{" "}
+            style={{ border: "0px", overflow: "hidden", height: "100vh" }}
+          />
           <div className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-lg font-bold px-2 py-1 shadow-lg rounded-xl mt-3">
             Select Your Category
           </div>

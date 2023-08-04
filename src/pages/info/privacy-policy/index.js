@@ -3,17 +3,17 @@ const PrivacyPolicy = () => {
     <>
       <div className="md:flex max-w-[1024px] gap-[1rem] mx-auto ">
         <div className="container shadow-gray-500 shadow-lg p-12 my-5 ">
-          <header class="text-cyan-500 text-[40px] font-bold">
+          <header className="text-cyan-500 text-[40px] font-bold">
             <h1>Privancy Policy</h1>
           </header>
           <div className="mt-8 text-[17px]">
-            <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+            <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
               Who We are{" "}
             </h2>
             <p className="mb-6 p-0">
               Our website address is: http://dragganaitool.com.
             </p>
-            <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+            <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
               Comments{" "}
             </h2>
             <p className="mb-6 p-0">
@@ -29,7 +29,7 @@ const PrivacyPolicy = () => {
               your profile picture is visible to the public in the context of
               your comment.
             </p>
-            <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+            <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
               Media{" "}
             </h2>
             <p className="mb-6 p-0">
@@ -38,7 +38,7 @@ const PrivacyPolicy = () => {
               to the website can download and extract any location data from
               images on the website.
             </p>
-            <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+            <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
               Cookies{" "}
             </h2>
             <p className="mb-6 p-0">
@@ -66,7 +66,7 @@ const PrivacyPolicy = () => {
               simply indicates the post ID of the article you just edited. It
               expires after 1 day.
             </p>
-            <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+            <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
               Embedded content from other websites{" "}
             </h2>
             <p className="mb-6 p-0">
@@ -82,14 +82,14 @@ const PrivacyPolicy = () => {
               the embedded content if you have an account and are logged in to
               that website.
             </p>
-            <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+            <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
               Who we share your data with{" "}
             </h2>
             <p className="mb-6 p-0">
               If you request a password reset, your IP address will be included
               in the reset email.
             </p>
-            <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+            <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
               How long we retain your data{" "}
             </h2>
             <p className="mb-6 p-0">
@@ -105,7 +105,7 @@ const PrivacyPolicy = () => {
               (except they cannot change their username). Website administrators
               can also see and edit that information.
             </p>
-            <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+            <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
               What rights you have over your data{" "}
             </h2>
             <p className="mb-6 p-0">
@@ -116,7 +116,7 @@ const PrivacyPolicy = () => {
               you. This does not include any data we are obliged to keep for
               administrative, legal, or security purposes.
             </p>
-            <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+            <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
               Where your data is sent{" "}
             </h2>
             <p className="mb-6 p-0">

@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import { HeaderLinks } from "../UI/HederLink";
-
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen((prev) => !prev);
   };
-
   return (
     <>
       <div className="flex bg-cyan-500 text-white flex-col">
@@ -99,7 +97,6 @@ export default function Navbar() {
           </div> */}
         </div>
       </div>
-
       {isMobileMenuOpen && (
         <div className="lg:hidden">
           <div className="space-y-1 px-2 pb-3 pt-2">
@@ -150,10 +147,8 @@ export default function Navbar() {
                     </button>
                   </div>
                 </form>
-              </div>
-            </div>
-        </>
-      )}
-    </>
-  );
-}
+          </div>
+        </div>
+       </>
+  )}
+  </>)}

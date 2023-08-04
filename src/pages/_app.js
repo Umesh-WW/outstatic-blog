@@ -5,7 +5,10 @@ import React from "react";
 import "tailwindcss/tailwind.css";
 
 function MyApp({ Component, pageProps, router }) {
-  if (router.pathname.includes("outstatic")) {
+  if (
+    router.pathname.includes("outstatic") ||
+    router.pathname.includes("sidebar-menu")
+  ) {
     return <Component {...pageProps} />;
   }
   return (

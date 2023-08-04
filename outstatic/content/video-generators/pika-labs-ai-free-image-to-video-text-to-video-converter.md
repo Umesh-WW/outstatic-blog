@@ -6,7 +6,7 @@ author:
   picture: 'https://avatars.githubusercontent.com/u/138206213?v=4'
 slug: 'pika-labs-ai-free-image-to-video-text-to-video-converter'
 description: ' we’re going to dive into the fascinating world of Pika Labs, a powerful text'
-coverImage: ''
+coverImage: '/images/pikalabs-ai-kyNT.png'
 publishedAt: '2023-08-03T08:29:21.784Z'
 ---
 

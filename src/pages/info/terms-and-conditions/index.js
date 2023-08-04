@@ -3,11 +3,11 @@ const Terms = () => {
     <>
       <div className="md:flex max-w-[1024px] gap-[1rem] mx-auto ">
         <div className="container shadow-gray-500 shadow-lg p-12 my-5 ">
-          <header class="text-cyan-500 text-[40px] font-bold">
+          <header className="text-cyan-500 text-[40px] font-bold">
             <h1>Terms</h1>
           </header>
           <div>
-            <div class="mt-5" itemprop="text">
+            <div className="mt-5" itemprop="text">
               <p className="mb-5 text-[17px] mt-2em">
                 Welcome to DragGAN AI Tool Blog!
               </p>
@@ -35,7 +35,7 @@ const Terms = () => {
                 copyright owner.
               </p>
 
-              <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+              <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
                 Use of Cookies:{" "}
               </h2>
 
@@ -46,7 +46,7 @@ const Terms = () => {
                 functionality and user experience of the website.
               </p>
 
-              <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+              <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
                 User-generated Content:{" "}
               </h2>
 
@@ -61,7 +61,7 @@ const Terms = () => {
                 of the use of such content.
               </p>
 
-              <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+              <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
                 Hyperlinking to Third-Party Websites:
               </h2>
 
@@ -74,7 +74,7 @@ const Terms = () => {
                 the use of third-party websites.
               </p>
 
-              <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+              <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
                 Linking to the DragGAN AI Tool Website:{" "}
               </h2>
 
@@ -100,7 +100,7 @@ const Terms = () => {
                 </li>
               </ul>
 
-              <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+              <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
                 Removal of Links:{" "}
               </h2>
 
@@ -111,7 +111,7 @@ const Terms = () => {
                 obligated to do so or to respond to you directly.
               </p>
 
-              <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+              <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
                 Disclaimer of Liability:{" "}
               </h2>
 
@@ -124,7 +124,7 @@ const Terms = () => {
                 indirect, or consequential loss or damage.
               </p>
 
-              <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+              <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
                 Modification of Terms:{" "}
               </h2>
 
@@ -134,7 +134,7 @@ const Terms = () => {
                 you agree to be bound by the modified Terms.
               </p>
 
-              <h2 class="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
+              <h2 className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-[25px] font-bold px-6 py-1 shadow-xl rounded-xl mb-5">
                 Governing Law:{" "}
               </h2>
 

@@ -86,7 +86,7 @@ const Index = ({ allBlogs }) => {
             );
           })}
         </div>
-        {filteredBlogs.length < 1 && (
+        {filteredBlogs.length < 1 && s && (
           <header className="h-55 mb-5 p-12 bg-white text-[#18a7c7] font-[600] text-4xl drop-shadow-lg ">
             <h1>Nothing Found</h1>
             <p className="h-4 mb-5 p-4 text-black text-lg"> 

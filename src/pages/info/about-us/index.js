@@ -3,7 +3,7 @@ const Aboutus = () => {
     <>
       <div className="md:flex max-w-[1024px] gap-[1rem] mx-auto ">
         <div className="container shadow-gray-500 shadow-lg p-12 my-5 md:h-[80rem]">
-          <header class="text-cyan-500 text-[40px] font-bold">
+          <header className="text-cyan-500 text-[40px] font-bold">
             <h1>About Us</h1>
           </header>
           <p className="mt-7 mb-1.5em text-[17px]">

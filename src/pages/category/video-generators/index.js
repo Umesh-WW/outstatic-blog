@@ -6,8 +6,8 @@ const Index = ({ posts }) => {
   return (
     <>
       <div className="container">
-        <header className="h-55 mb-5 p-12 bg-white text-[#18a7c7] font-[600] text-4xl drop-shadow-lg ">
-          <h1>AI Transcriber</h1>
+        <header className="h-55 mb-5 p-12 bg-white text-[#18a7c7] font-[600] text-4xl drop-shadow-lg my-5 ">
+          <h1>AI Video Generator</h1>
         </header>
         {/* <h1>Welcome to my Blog!</h1> */}
         <div className="row">
@@ -57,7 +57,7 @@ const Index = ({ posts }) => {
                       </p>
                       <p className="mb-0">
                         <Link
-                          href={"/category/ai-transcriber/" + post.slug}
+                          href={"/category/video-generators/" + post.slug}
                           className="text-white bg-[#242226] text-base inline-block px-5 py-3"
                         >
                           Read more
@@ -78,7 +78,7 @@ const Index = ({ posts }) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const posts = getDocuments("transcribers", [
+  const posts = getDocuments("video-generators", [
     "title",
     "publishedAt",
     "slug",

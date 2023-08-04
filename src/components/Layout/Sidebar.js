@@ -3,18 +3,18 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 
 const category = [
-    ["AI Avtar Generator", "/category/ai-avatar-generator"],
-    ["AI Chatbot", "/category/ai-chatbot"],
-    ["AI Logo Maker", "/category/ai-logo-maker"],
-    ["AI Transcriber", "/category/ai-transcriber"],
-    ["AI Video Generator", "/category/ai-video-generator"],
-    ["AI Voice", "/category/ai-voice"],
-    ["AI Writer", "/category/ai-writer"],
-    ["Text Generator", "/category/text-generator"],
-  ];
+  ["AI Avtar Generator", "/category/avatar-generators"],
+  ["AI Chatbot", "/category/chatbots"],
+  ["AI Logo Maker", "/category/logo-makers"],
+  ["AI Transcriber", "/category/transcribers"],
+  ["AI Video Generator", "/category/video-generators"],
+  ["AI Voice", "/category/a-ivoices"],
+  ["AI Writer", "/category/writers"],
+  ["Text Generator", "/category/text-generators"],
+];
 
 const Sidebar = () => {
-  const [search, setSearch] = useState('')
+  const [search, setSearch] = useState("");
   const router = useRouter();
 
   useEffect(() => {
@@ -39,8 +39,8 @@ const Sidebar = () => {
   };
 
   const handleSearch = () => {
-      router.push(`/?s=${search}`);
-  }
+    router.push(`/?s=${search}`);
+  };
 
   return (
     <aside className="lg:w-[450px]  md:relative md:right-0">
@@ -48,8 +48,16 @@ const Sidebar = () => {
         <div className="md:max-w-[350px] md:px-7 text-xl shadow-gray-500 shadow-md py-8 px-16 mx-auto my-8">
           Search
           <div className="flex gap-3">
-            <input type="text" value={search} onChange={handleChangeSearch} className="border border-black w-[8rem] mr" />
-            <button onClick={handleSearch} className="bg-black text-md text-white py-1 px-3 rounded">
+            <input
+              type="text"
+              value={search}
+              onChange={handleChangeSearch}
+              className="border border-black w-[8rem] mr"
+            />
+            <button
+              onClick={handleSearch}
+              className="bg-black text-md text-white py-1 px-3 rounded"
+            >
               Search
             </button>
           </div>

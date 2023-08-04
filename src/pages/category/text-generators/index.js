@@ -7,7 +7,7 @@ const Index = ({ posts }) => {
     <>
       <div className="container">
         <header className="h-55 mb-5 p-12 bg-white text-[#18a7c7] font-[600] text-4xl drop-shadow-lg ">
-          <h1>AI Writer</h1>
+          <h1>AI Text Generator</h1>
         </header>
         {/* <h1>Welcome to my Blog!</h1> */}
         <div className="row">
@@ -57,7 +57,7 @@ const Index = ({ posts }) => {
                       </p>
                       <p className="mb-0">
                         <Link
-                          href={"/category/ai-writer/" + post.slug}
+                          href={"/category/text-generators/" + post.slug}
                           className="text-white bg-[#242226] text-base inline-block px-5 py-3"
                         >
                           Read more
@@ -78,7 +78,7 @@ const Index = ({ posts }) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const posts = getDocuments("writers", [
+  const posts = getDocuments("text-generators", [
     "title",
     "publishedAt",
     "slug",

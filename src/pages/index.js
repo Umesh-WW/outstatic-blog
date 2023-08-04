@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 const Index = ({ allBlogs }) => {
   const router = useRouter();
   const { s } = router.query;
+  
   let filteredBlogs = [];
   if (s && allBlogs && allBlogs.length > 0) {
     filteredBlogs = allBlogs.filter((post) =>
@@ -20,7 +21,7 @@ const Index = ({ allBlogs }) => {
         </header>
         {/* <h1>Welcome to my Blog!</h1> */}
         <div className="row">
-          {(s ? filteredBlogs : allBlogs).map((post) => {
+          {(s ? filteredBlogs : allBlogs.slice(0,5)).map((post) => {
             if (post.title.length > 100) {
               post.title = post.title.slice(0, 100) + "...";
             }
@@ -72,7 +73,7 @@ const Index = ({ allBlogs }) => {
                       </p>
                       <p className="mb-0">
                         <Link
-                          href={"/blog/" + post.slug}
+                          href={`/category/${post.collection}/${post.slug}`}
                           className="text-white bg-[#242226] hover:bg-stone-700 text-base inline-block px-5 py-3"
                         >
                           Read more
@@ -114,7 +115,11 @@ export async function getStaticProps() {
       "content",
       "author",
     ]);
-    allBlogs = [...allBlogs, ...blogData];
+    const blogWithColletion = blogData.map((blg) => ({
+      ...blg,
+      collection: i,
+    }));
+    allBlogs = [...allBlogs, ...blogWithColletion];
   });
   allBlogs.sort(function (a, b) {
     return a.publishedAt.localeCompare(b.publishedAt);

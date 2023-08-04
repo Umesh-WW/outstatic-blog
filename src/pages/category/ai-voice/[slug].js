@@ -40,19 +40,21 @@ const BlogSingle = ({ post, htmlData }) => {
               />
             </div>
           </div>
-          <div class="mx-auto mt-16 md:items-center p-5 md:flex max-w-md overflow-hidden rounded-xl bg-white shadow-lg md:max-w-4xl">
+          <div className="mx-auto mt-16 md:items-center p-5 md:flex max-w-md overflow-hidden rounded-xl bg-white shadow-lg md:max-w-4xl">
             <Image
               width={100}
               height={100}
-              class="m-auto md:h-24 h-36 rounded-full object-cover object-center"
+              className="m-auto md:h-24 h-36 rounded-full object-cover object-center"
               src={post.author.picture}
               alt="Profile Image"
             />
 
-            <div class="p-4">
-              <h2 class="mb-2 text-2xl font-semibold">{post.author.name}</h2>
+            <div className="p-4">
+              <h2 className="mb-2 text-2xl font-semibold">
+                {post.author.name}
+              </h2>
 
-              <p class="text-base text-gray-700">
+              <p className="text-base text-gray-700">
                 {post.author.name} is a passionate blogger specializing in SEO
                 and writing high-quality articles. With a strong background in
                 AI and technology, Sonu provides valuable insights and
@@ -91,7 +93,7 @@ export const getStaticProps = async ({ params }) => {
     "content",
     "publishedAt",
   ]);
-const htmlData = await markdownToHtml(post.content);
+  const htmlData = await markdownToHtml(post.content);
   return {
     props: { post, htmlData },
   };

@@ -6,13 +6,13 @@ import { useRouter } from "next/router";
 const Index = ({ allBlogs }) => {
   const router = useRouter();
   const { s } = router.query;
-  console.log("ssssss", s, allBlogs);
+  // console.log("ssssss", s, allBlogs);
   let filteredBlogs = [];
-  if(s && allBlogs && allBlogs.length > 0) {
-   filteredBlogs = allBlogs.filter((post) =>
-    post.title.toLowerCase().includes(s.toLowerCase())
-  );
- }
+  if (s && allBlogs && allBlogs.length > 0) {
+    filteredBlogs = allBlogs.filter((post) =>
+      post.title.toLowerCase().includes(s.toLowerCase())
+    );
+  }
   return (
     <>
       <div className="container">
@@ -89,7 +89,7 @@ const Index = ({ allBlogs }) => {
         {filteredBlogs.length < 1 && s && (
           <header className="h-55 mb-5 p-12 bg-white text-[#18a7c7] font-[600] text-4xl drop-shadow-lg ">
             <h1>Nothing Found</h1>
-            <p className="h-4 mb-5 p-4 text-black text-lg"> 
+            <p className="h-4 mb-5 p-4 text-black text-lg">
               Sorry, but nothing matched your search terms. Please try again
               with some different keywords.
             </p>
@@ -102,11 +102,10 @@ const Index = ({ allBlogs }) => {
 
 export default Index;
 
-
 export async function getStaticProps() {
   const collection = getCollections();
   let allBlogs = [];
-  console.log('collections---------->,',collection);
+  // console.log("collections---------->,", collection);
   (collection || []).map((i) => {
     let blogData = getDocuments(i, [
       "title",

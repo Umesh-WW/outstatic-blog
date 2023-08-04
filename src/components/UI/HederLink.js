@@ -31,9 +31,9 @@ export function HeaderLinks() {
     return (
       <ul
         id="dropdown"
-        className="bg-cyan-500 text-white absolute z-10 w-60 mt-5"
+        className="bg-cyan-500 text-white absolute z-10 w-60 mt-4"
       >
-        {subMenu.map(({ name, path },i) => (
+        {subMenu.map(({ name, path }, i) => (
           <Link href={path} key={i} onClick={() => setIsSubMenuOpen(false)}>
             <li key={name} className={`hover:bg-gray-900 p-3`}>
               <span
@@ -49,13 +49,14 @@ export function HeaderLinks() {
       </ul>
     );
   };
+
   return (
     <>
-      {links.map(({ name, path, subMenu },i) => (
-        <div key={i} className="relative">
+      {links.map(({ name, path, subMenu }, i) => (
+        <div key={i} className="relative m-0">
           <Link
             href={path}
-            className={`py-5 px-8 hover:bg-gray-900 text-[15px] font-medium ${
+            className={`px-5 py-5 leading-normal hover:bg-gray-900 text-[15px] font-medium ${
               router.pathname === path ? "activeLinkRoute" : ""
             }`}
             onClick={() => name === "AI Tools" && setIsSubMenuOpen(true)}
@@ -63,7 +64,7 @@ export function HeaderLinks() {
             <span>{name}</span>
           </Link>
           {name === "AI Tools" && (
-            <span className=" fill-white pr-10 absolute top-1 left-24">
+            <span className=" fill-white pr-10 absolute top-1 left-20">
               <span>
                 <svg
                   viewBox="0 0 330 512"
@@ -85,3 +86,4 @@ export function HeaderLinks() {
     </>
   );
 }
+

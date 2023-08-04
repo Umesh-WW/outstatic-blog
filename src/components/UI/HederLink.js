@@ -5,10 +5,10 @@ export function HeaderLinks() {
   const router = useRouter();
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const links = [
-    { name: "Home", path: "/" },
-    { name: "Github", path: "/draggan-ai-github" },
-    { name: "Install", path: "/category/draggan-ai-download/" },
-    { name: "DragGAN Download", path: "/draggan-ai-download" },
+    { name: "Home", path: "/category/ai-avatar-generator" },
+    { name: "Github", path: "/category/ai-logo-maker" },
+    { name: "Install", path: "/category/ai-video-generator" },
+    { name: "DragGAN Download", path: "/category/ai-video-generator" },
     {
       name: "AI Tools",
       path: "/category/ai-tool",
@@ -24,8 +24,8 @@ export function HeaderLinks() {
         { name: "Text Generator", path: "/category/text-generator" },
       ],
     },
-    { name: "ChatGPT", path: "/category/chatgpt/" },
-    { name: "Submit Guest Post", path: "/submit-guest-post/" },
+    { name: "ChatGPT", path: "/category/ai-chatbot" },
+    // { name: "Submit Guest Post", path: "/submit-guest-post/" },
   ];
   const DropdownMenu = ({ subMenu }) => {
     return (

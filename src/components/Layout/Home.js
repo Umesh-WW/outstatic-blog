@@ -36,7 +36,7 @@ const Home = () => {
             Editor
             <br />
             <br />
-            <span className="font-bold">Editor's Rating:</span>
+            <span className="font-bold">Editor s Rating:</span>
             {/* star rating start */}
             <div class="flex items-center space-x-1">
               <span className="text-3xl font-bold mr-3">4</span>

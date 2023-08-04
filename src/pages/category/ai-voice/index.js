@@ -57,7 +57,7 @@ const Index = ({ posts }) => {
                       </p>
                       <p className="mb-0">
                         <Link
-                          href={"/blog/" + post.slug}
+                          href={"/category/ai-voice/" + post.slug}
                           className="text-white bg-[#242226] text-base inline-block px-5 py-3"
                         >
                           Read more
@@ -78,7 +78,7 @@ const Index = ({ posts }) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  const posts = getDocuments("videos", [
+  const posts = getDocuments("a-ivoices", [
     "title",
     "publishedAt",
     "slug",

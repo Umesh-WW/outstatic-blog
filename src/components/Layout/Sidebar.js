@@ -1,6 +1,9 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { OutstaticApi } from "outstatic";
+import img1 from '../../assets/img1.png'
+import img2 from '../../assets/img2.png'
 
 const Sidebar = () => {
   const [blogPosts, setBlogPosts] = useState([]);
@@ -12,6 +15,7 @@ const Sidebar = () => {
       .then((data) => setBlogPosts(data))
       .catch((error) => console.error("Error fetching blog posts:", error));
   }, []);
+  
   const category = [
     ["AI Avtar Generator", "/category/ai-avatar-generator"],
     ["AI Chatbot", "/category/ai-chatbot"],
@@ -26,7 +30,7 @@ const Sidebar = () => {
   return (
     <aside className="lg:w-[450px]  md:relative md:right-0">
       <div className="md:max-w-[450px]">
-        <div className="md:max-w-[350px] md:px-7 text-xl shadow-gray-500 shadow-md py-8 px-16 mx-auto my-8">
+        {/* <div className="md:max-w-[350px] md:px-7 text-xl shadow-gray-500 shadow-md py-8 px-16 mx-auto my-8">
           Search
           <div className="flex gap-3">
             <input type="text" className="border border-black w-[8rem] mr" />
@@ -34,7 +38,7 @@ const Sidebar = () => {
               Search
             </button>
           </div>
-        </div>
+        </div> */}
         <div className="md:max-w-[350px] shadow-gray-500 shadow-md py-8 px-8 mx-auto my-8">
           <div className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-xl font-bold px-4 py-1 shadow-lg rounded-xl mt-3">
             Latest AI Tutorials
@@ -71,6 +75,52 @@ const Sidebar = () => {
               </div>
             );
           })}
+          <div className="mt-6 border-b-2">
+            <Link
+              href={
+                "/category/ai-avatar-generator/this-is-post-for-ai-avatar-generator"
+              }
+            >
+              <Image
+                width={100}
+                height={100}
+                src={img1}
+                alt=""
+                layout="responsive"
+              />
+            </Link>
+            <div className="p-2">
+              <Link
+                href={
+                  "/category/ai-avatar-generator/this-is-post-for-ai-avatar-generator"
+                }
+              >
+                <h5 className="mb-1 font-bold tracking-tight text-black">
+                  this is post for ai-avatar-generator
+                </h5>
+              </Link>
+              <div className="text-xs">{<time>22 01 2012</time>}</div>
+            </div>
+          </div>
+          <div className="mt-6 border-b-2">
+            <Link href={"/category/ai-chatbot/this-is-post-of-best-chatbot"}>
+              <Image
+                width={100}
+                height={100}
+                src={img2}
+                alt=""
+                layout="responsive"
+              />
+            </Link>
+            <div className="p-2">
+              <Link href={"/category/ai-chatbot/this-is-post-of-best-chatbot"}>
+                <h5 className="mb-1 font-bold tracking-tight text-black">
+                  Pika Labs AI: Free Image to Video, Text to Video Converter
+                </h5>
+              </Link>
+              <div className="text-xs">{<time>12 01 2023</time>}</div>
+            </div>
+          </div>
         </div>
         <div className="md:max-w-[350px] shadow-gray-500 shadow-md py-8 px-5 mx-auto my-8">
           <div className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-lg font-bold px-2 py-1 shadow-lg rounded-xl mt-3">

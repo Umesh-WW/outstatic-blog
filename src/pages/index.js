@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 const Index = ({ allBlogs }) => {
   const router = useRouter();
   const { s } = router.query;
-  console.log("ssssss", s, allBlogs);
   let filteredBlogs = [];
   if(s && allBlogs && allBlogs.length > 0) {
    filteredBlogs = allBlogs.filter((post) =>
@@ -106,7 +105,6 @@ export default Index;
 export async function getStaticProps() {
   const collection = getCollections();
   let allBlogs = [];
-  console.log('collections---------->,',collection);
   (collection || []).map((i) => {
     let blogData = getDocuments(i, [
       "title",

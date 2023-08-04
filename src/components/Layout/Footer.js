@@ -1,11 +1,9 @@
 import React from "react";
 import { FooterLinks } from "../UI/FooterLink";
-import CustomPagination from "./CustomPagination";
 
 const Footer = () => {
   return (
     <footer className="mt-auto">
-      <CustomPagination />
       <div className="bg-zinc-800">
         <div className="font-mono m-auto max-w-5xl text-white py-[3rem] pl-20 md:px-[10rem] w-[60%]">
           <FooterLinks />

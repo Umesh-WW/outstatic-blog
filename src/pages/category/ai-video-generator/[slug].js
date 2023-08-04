@@ -1,8 +1,8 @@
+import markdownToHtml from "@/lib/markdownToHtml";
 import Image from "next/image";
 import { getDocuments, getDocumentBySlug } from "outstatic/server";
 
-const BlogSingle = ({ post }) => {
-  const content = post.content;
+const BlogSingle = ({ post, htmlData }) => {
   const publishedDate = new Date(post.publishedAt);
   const day = publishedDate.getDate();
   const month = publishedDate.toLocaleString("default", {
@@ -35,8 +35,8 @@ const BlogSingle = ({ post }) => {
             </header>
             <div className="text-left Poppins-sans-serif text-base  selection:bg-fuchsia-300 selection:text-white">
               <div
-                className="prose lg:prose-2xl home-intro"
-                dangerouslySetInnerHTML={{ __html: content }}
+                className="prose lg:prose-2xl home-intro overflow-auto break-word"
+                dangerouslySetInnerHTML={{ __html: htmlData }}
               />
             </div>
           </div>
@@ -91,7 +91,8 @@ export const getStaticProps = async ({ params }) => {
     "content",
     "publishedAt",
   ]);
+  const htmlData = await markdownToHtml(post.content);
   return {
-    props: { post },
+    props: { post, htmlData },
   };
 };

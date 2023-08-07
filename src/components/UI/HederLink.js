@@ -5,10 +5,7 @@ export function HeaderLinks() {
   const router = useRouter();
   const [isSubMenuOpen, setIsSubMenuOpen] = useState(false);
   const links = [
-    { name: "Home", path: "/category/avatar-generators" },
-    { name: "Github", path: "/category/logo-makers" },
-    { name: "Install", path: "/category/video-generators" },
-    { name: "DragGAN Download", path: "/category/video-generators" },
+    { name: "Home", path: "/" },
     {
       name: "AI Tools",
       path: "/category/ai-tool",
@@ -24,14 +21,13 @@ export function HeaderLinks() {
         { name: "Text Generator", path: "/category/text-generators" },
       ],
     },
-    { name: "ChatGPT", path: "/category/chatbots" },
     // { name: "Submit Guest Post", path: "/submit-guest-post/" },
   ];
   const DropdownMenu = ({ subMenu }) => {
     return (
       <ul
         id="dropdown"
-        className="bg-cyan-500 text-white absolute z-10 w-60 mt-5"
+        className="bg-cyan-500 text-white absolute z-10 w-60 mt-4"
       >
         {subMenu.map(({ name, path }, i) => (
           <Link href={path} key={i} onClick={() => setIsSubMenuOpen(false)}>
@@ -52,10 +48,10 @@ export function HeaderLinks() {
   return (
     <>
       {links.map(({ name, path, subMenu }, i) => (
-        <div key={i} className="relative">
+        <div key={i} className="relative m-0">
           <Link
             href={path}
-            className={`py-5 px-8 hover:bg-gray-900 text-[15px] font-medium ${
+            className={`px-5 py-5 leading-normal hover:bg-gray-900 text-[15px] font-medium ${
               router.pathname === path ? "activeLinkRoute" : ""
             }`}
             onClick={() => name === "AI Tools" && setIsSubMenuOpen(true)}
@@ -63,7 +59,7 @@ export function HeaderLinks() {
             <span>{name}</span>
           </Link>
           {name === "AI Tools" && (
-            <span className=" fill-white pr-10 absolute top-1 left-24">
+            <span className=" fill-white pr-10 absolute top-1 left-20">
               <span>
                 <svg
                   viewBox="0 0 330 512"

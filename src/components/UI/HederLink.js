@@ -25,7 +25,7 @@ export function HeaderLinks() {
       ],
     },
     { name: "ChatGPT", path: "/category/chatbots" },
-    // { name: "Submit Guest Post", path: "/submit-guest-post/" },
+    { name: "Submit Guest Post", path: "/submit-guest-post/" },
   ];
   const DropdownMenu = ({ subMenu }) => {
     return (

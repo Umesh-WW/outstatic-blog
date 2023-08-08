@@ -47,16 +47,36 @@ const Sidebar = () => {
       <div className="md:max-w-[450px]">
         <div className="md:max-w-[350px] md:px-7 text-xl shadow-gray-500 shadow-md py-8 px-16 mx-auto my-8">
           Search
-          <div className="flex gap-3">
+          <div className="flex gap-3 max-w-full">
             <input
               type="text"
               value={search}
               onChange={handleChangeSearch}
-              className="border border-black w-[8rem] mr"
+              className="border border-black w-[8rem] py-2.5 px-4 bg-[#fafafa] focus:outline-none focus:border-gray-500 text-gray-500 min-w-[60%] relative"
             />
+            {search && (
+              <>
+                <div className="absolute left-56 top-[105px] text-sky-800">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6 "
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </div>
+              </>
+            )}
             <button
               onClick={handleSearch}
-              className="bg-black text-md text-white py-1 px-3 rounded"
+              className="bg-black text-md text-white py-2.5 px-5 text-[15px]  "
             >
               Search
             </button>

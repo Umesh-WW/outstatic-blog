@@ -1,7 +1,7 @@
 import { getDocuments } from "outstatic/server";
 import Link from "next/link";
 import Image from "next/image";
-
+import ReadAlso from "@/pages/info/read-also/index";
 const Index = ({ posts }) => {
   return (
     <>
@@ -71,6 +71,8 @@ const Index = ({ posts }) => {
           })}
         </div>
       </div>
+      {/* read Also */}
+      {posts.length <= 1 && <ReadAlso/>}
     </>
   );
 };

@@ -2,12 +2,12 @@ import { getDocuments } from "outstatic/server";
 import Image from "next/image";
 
 const Index = ({ posts }) => {
-      const handleLinkClick = (path) => {
-        window.parent.postMessage({ type: "changePath", path }, "*");
-      };
+  const handleLinkClick = (path) => {
+    window.parent.postMessage({ type: "changePath", path }, "*");
+  };
   return (
     <>
-      <div className="md:max-w-[350px] shadow-gray-500 shadow-md py-8 px-8 mx-auto my-8">
+      <div className="md:max-w-[350px] shadow-gray-500 shadow-md py-8 px-8 mx-auto mb-8">
         <div className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-xl font-bold px-4 py-1 shadow-lg rounded-xl mt-3">
           Latest AI Tutorials
         </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
@@ -16,7 +16,17 @@ const category = [
 const Sidebar = () => {
   const [search, setSearch] = useState("");
   const router = useRouter();
+  const iframeRef = useRef(null);
 
+  useEffect(() => {
+    if (iframeRef.current) {
+      const iframeDocument =
+        iframeRef.current.contentDocument ||
+        iframeRef.current.contentWindow.document;
+      const iframeContentHeight = iframeDocument.body.scrollHeight;
+      iframeRef.current.style.height = `${iframeContentHeight}px`;
+    }
+  }, []);
   useEffect(() => {
     const handleMessage = (event) => {
       const { type, path } = event.data;
@@ -64,12 +74,25 @@ const Sidebar = () => {
         </div>
 
         <div className="md:max-w-[350px] shadow-gray-500 shadow-md py-8 px-5 mx-auto my-8">
-          <iframe
+          {/* <iframe
             src="/info/sidebar-menu" // Replace with the actual path to the component or page you want to render
             width="100%" // Set the desired width of the sidebar
             height="100%"
             // scrolling="no"
             style={{ border: "0px", overflow: "hidden", height: "100vh" }}
+          /> */}
+          <iframe
+            ref={iframeRef}
+            src="/info/sidebar-menu"
+            width="100%"
+            // height="100%" (remove this line)
+            scrolling="no"
+            style={{
+              border: "0px",
+              overflow: "hidden",
+              width: "100%",
+              minHeight: "100vh",
+            }} // Adjust width and minHeight
           />
           <div className="bg-gradient-to-tr from-blue-600 to-blue-400 text-white text-lg font-bold px-2 py-1 shadow-lg rounded-xl mt-3">
             Select Your Category

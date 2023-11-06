@@ -2,11 +2,12 @@ import { getCollections, getDocuments } from "outstatic/server";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import Script from "next/script";
 
 const Index = ({ allBlogs }) => {
   const router = useRouter();
   const { s } = router.query;
-  
+
   let filteredBlogs = [];
   if (s && allBlogs && allBlogs.length > 0) {
     filteredBlogs = allBlogs.filter((post) =>
@@ -16,12 +17,22 @@ const Index = ({ allBlogs }) => {
   return (
     <>
       <div className="container">
+        <Script src="https://www.googletagmanager.com/gtag/js?id=GTM-WH8J6GJ9" />
+        <Script id="google-analytics">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+ 
+          gtag('config', 'GTM-WH8J6GJ9');
+        `}
+        </Script>
         <header className="h-55 mb-5 p-12 bg-white text-[#18a7c7] font-[600] text-4xl drop-shadow-lg ">
           <h1>{s ? `Search Results for: ${s}` : "Home Page"}</h1>
         </header>
         {/* <h1>Welcome to my Blog!</h1> */}
         <div className="row">
-          {(s ? filteredBlogs : allBlogs.slice(0,5)).map((post) => {
+          {(s ? filteredBlogs : allBlogs.slice(0, 5)).map((post) => {
             if (post.title.length > 100) {
               post.title = post.title.slice(0, 100) + "...";
             }
